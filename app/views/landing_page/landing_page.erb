@@ -77,6 +77,7 @@
   </style>
 
 </head>
+<body>
 
 <% enabled_sections = sections.reject { |section| section["disabled"] } %>
 
@@ -90,6 +91,8 @@
     <%= render partial: "hero", locals: {section_id: section_id, s: s} %>
   <% when "footer" %>
     <%= render partial: "footer", locals: {section_id: section_id, s: s} %>
+  <% when "info" %>
+    <%= render partial: "info", locals: {section_id: section_id, s: s} %>
   <% end %>
 
 <% end # enabled_sections#each %>
@@ -107,4 +110,5 @@
 
 <%= yield :javascript %>
 
+</body>
 </html>

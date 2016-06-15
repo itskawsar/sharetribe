@@ -37,10 +37,10 @@ class LandingPageController < ActionController::Metal
     preview_version = parse_int(params[:preview_version])
 
     begin
-      structure = CLP::LandingPageStore.load_structure(cid, preview_version)
+      # structure = CLP::LandingPageStore.load_structure(cid, preview_version)
 
       # Uncomment for dev purposes
-      # structure = JSON.parse(data_str)
+      structure = JSON.parse(data_str)
 
       # Tell robots to not index and to not follow any links
       headers["X-Robots-Tag"] = "none"
@@ -126,6 +126,17 @@ class LandingPageController < ActionController::Metal
       "signup_button_color": {"type": "marketplace_data", "id": "primary_color"}
     },
     {
+      "id": "info",
+      "kind": "info",
+      "variation": "one_column",
+      "title": "Section title goes here",
+      "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Nulla vitae elit libero.",
+      "button_title": "Section link",
+      "button_path": {"path": "https://google.com"},
+      "button_color": {"type": "marketplace_data", "id": "primary_color"},
+      "background_image": {"type": "assets", "id": "myinfoimage"}
+    },
+    {
       "id": "footer",
       "kind": "footer",
       "theme": "dark",
@@ -152,19 +163,19 @@ class LandingPageController < ActionController::Metal
   ],
 
   "composition": [
-    { "section": {"type": "sections", "id": "footer"},
+    { "section": {"type": "sections", "id": "info"},
       "disabled": false},
-    { "section": {"type": "sections", "id": "myhero1"},
+    { "section": {"type": "sections", "id": "private_hero"},
+      "disabled": false},
+    { "section": {"type": "sections", "id": "footer"},
       "disabled": false},
     { "section": {"type": "sections", "id": "myhero1"},
       "disabled": true}
   ],
 
   "assets": [
-    {
-      "id": "myheroimage",
-      "src": "hero.jpg"
-    }
+    { "id": "myheroimage", "src": "hero.jpg" },
+    { "id": "myinfoimage", "src": "info.jpg" }
   ]
 }
 JSON
