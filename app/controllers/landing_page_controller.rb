@@ -163,9 +163,9 @@ class LandingPageController < ActionController::Metal
   ],
 
   "composition": [
-    { "section": {"type": "sections", "id": "info"},
-      "disabled": false},
     { "section": {"type": "sections", "id": "private_hero"},
+      "disabled": true},
+    { "section": {"type": "sections", "id": "info"},
       "disabled": false},
     { "section": {"type": "sections", "id": "footer"},
       "disabled": false},
