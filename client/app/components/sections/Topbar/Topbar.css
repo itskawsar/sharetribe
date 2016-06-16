@@ -36,6 +36,12 @@
       background: none;
     }
   }
+
+
+  & .topbarLanguageMenuLabel {
+    font-size: var(--Menu_fontSizeSmall);
+  }
+
 }
 
 .topbarLogo {
