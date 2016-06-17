@@ -43,8 +43,9 @@
 }
 
 .topbarAvatar {
-  height: var(--topbarAvatarSize);
-  margin: var(--topbarAvatarMargin);
+  height: var(--topbarHeight);
+  padding: var(--topbarAvatarPadding);
   font-family: var(--topbarFontFamily);
   font-size: var(--topbarFontSize);
+  align-self: flex-start;
 }

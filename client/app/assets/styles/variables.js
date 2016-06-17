@@ -77,7 +77,7 @@ module.exports = {
   '--topbarFontFamily': "'Proxima Nova Soft', Helvetica, sans",
   '--topbarFontSize': '14px',
   '--topbarAvatarSize': '44px',
-  '--topbarAvatarMargin': '18px 24px',
+  '--topbarAvatarPadding': '18px 24px',
 
   '--topbarBorderColor': topbarBorderColor,
 
