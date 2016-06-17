@@ -2159,6 +2159,9 @@ en:
   unit:
     day: day
     days: days
+  web:
+    topbar:
+      menu: Menu
   will_paginate:
     models:
       person:
